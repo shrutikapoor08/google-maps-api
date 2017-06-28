@@ -1,0 +1,28 @@
+<html>
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAARHeUw-DNg9BRCnJs7L9ADnlCLQBORKk&libraries=places" async defer></script>
+  <script src="script.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" rel="stylesheet"/>
+
+  <title> Find a restaurant </title>
+</head>
+
+<body>
+  <div id="container">
+    <form id="radiusInput">
+      <div class="form-group">
+        <input type="text" class="form-control col-sm-12" id="autocomplete" placeholder="Set your starting point" />
+        <input type="text" id="distance" class="form-control" onChange="setBounds(this.value)" placeholder="How far do you want to go? (maximum 50kms)" />
+      </div>
+    </form>
+    <button id="findPlaces" onClick="performSearch()"> Find restaurants </button>
+  </div>
+
+  <div id="map"></div>
+
+</body>
+
+</html>
